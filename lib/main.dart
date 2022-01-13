@@ -12,20 +12,34 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      defaultTransition: Transition.zoom,
-      transitionDuration: const Duration(milliseconds: 1),
-      getPages: [
-      GetPage(name: '/', page: () => const HomeBody()),
-      ],
-      title: 'Paylater',
+      title: 'Flutter Demo',
       theme: theme(),
-      home: const HomeBody(),
+      home: LayoutBuilder(
+        builder: ((BuildContext context, BoxConstraints constraints){
+        double _width = constraints.maxWidth;
+        double _height = constraints.maxHeight;
+        return HomeBody(_width, _height);
+      }),
+      ),
     );
   }
+}
+
+
+Widget Main(double _width, double _height) {
+  return GetMaterialApp(
+    theme: theme(),
+    initialRoute: '/',
+    defaultTransition: Transition.zoom,
+    transitionDuration: const Duration(milliseconds: 1),
+    getPages: [
+      GetPage(name: '/', page: () => HomeBody(_width, _height)),
+    ],
+    title: 'Paylater',
+  );
 }

@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:paylater_startup/home_screen/header.dart';
 
-class HomeBody extends StatelessWidget {
-  const HomeBody({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
+Widget HomeBody(double _width, double _height) {
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Wrap(
+            children: [
+              Header(_width, _height),
+            ],
+          ),
+        ),
+      ),
+    );
   }
-}
