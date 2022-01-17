@@ -18,11 +18,7 @@ Widget categoryList(double _width, double _height) {
     categoryInformation(title: "Plants", icon: const FaIcon(FontAwesomeIcons.tree)),
   ];
 
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Expanded(
-            child: SizedBox(
+  return SizedBox(
               height: 70,
               width: _width,
               child: ListView.builder(
@@ -38,9 +34,16 @@ Widget categoryList(double _width, double _height) {
                         Container(
                             width: 40,
                             height: 40,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: kPrimaryColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  blurRadius: 6,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
                             ),
                             child: Icon(categoryData[index].icon.icon, size: 13, color: Colors.white)
                         ),
@@ -51,9 +54,6 @@ Widget categoryList(double _width, double _height) {
                   );
                 },
               ),
-            ),
-        ),
-      ],
   );
 }
 

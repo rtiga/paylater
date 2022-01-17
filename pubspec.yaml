@@ -34,6 +34,7 @@ dependencies:
   crypto: ^3.0.1
   flutter_svg: ^1.0.0
   font_awesome_flutter: ^9.2.0
+  curved_navigation_bar: ^1.0.1
 
 
 
@@ -63,9 +64,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 assets:
-  -assets/images/pictures/sale_1.jpg
-  -assets/images/pictures/sale_2.jpg
-  -assets/images/pictures/sale_3.jpg
+  -assets/images/pictures/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -16,31 +16,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Paylater Startup',
       theme: theme(),
+      initialRoute: '/',
+      defaultTransition: Transition.zoom,
+      transitionDuration: const Duration(milliseconds: 1),
+      getPages: [
+        GetPage(name: '/', page: () => MyApp()),
+      ],
       home: LayoutBuilder(
         builder: ((BuildContext context, BoxConstraints constraints){
         double _width = constraints.maxWidth;
         double _height = constraints.maxHeight;
-        return HomeScreen(_width, _height);
+        return homeScreen(_width, _height);
       }),
       ),
     );
   }
-}
-
-
-Widget Main(double _width, double _height) {
-  return GetMaterialApp(
-    theme: theme(),
-    initialRoute: '/',
-    defaultTransition: Transition.zoom,
-    transitionDuration: const Duration(milliseconds: 1),
-    getPages: [
-      GetPage(name: '/', page: () => HomeScreen(_width, _height)),
-    ],
-    title: 'Paylater',
-  );
 }
