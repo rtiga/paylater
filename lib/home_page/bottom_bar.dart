@@ -51,7 +51,7 @@ with TickerProviderStateMixin {
   List<IconData> listOfIcons = [
     FontAwesomeIcons.home,
     FontAwesomeIcons.solidHeart,
-    FontAwesomeIcons.arrowUp,
+    FontAwesomeIcons.list,
     FontAwesomeIcons.shoppingCart,
     FontAwesomeIcons.solidUser,
   ];
@@ -313,7 +313,7 @@ with TickerProviderStateMixin {
                       : index == 4
                       ? fifthIconAngle.value
                       : 0,
-                      child: 
+                      child:
                       // Column(
                       //   children: [
                           FaIcon(

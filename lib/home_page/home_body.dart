@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:paylater_startup/home_page/category.dart';
 import 'package:paylater_startup/home_page/promo_information.dart';
 import 'package:paylater_startup/home_page/top_brands.dart';
-import 'package:paylater_startup/util/colors.dart';
 import 'package:paylater_startup/util/product_template.dart';
 
 Widget HomeBody(double _width, double _height){
@@ -114,7 +113,6 @@ Widget HomeBody(double _width, double _height){
               }
           ),
         ),
-
       ],
     ),
   );
