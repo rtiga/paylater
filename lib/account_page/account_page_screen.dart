@@ -4,12 +4,12 @@ import 'package:paylater_startup/home_page/bottom_bar.dart';
 
 import 'header.dart';
 
-class AccountPage extends StatelessWidget {
+class AccountPageScreen extends StatelessWidget {
 
   double width;
   double height;
 
-  AccountPage(this.width, this.height, {Key? key}) : super(key: key);
+  AccountPageScreen(this.width, this.height, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
